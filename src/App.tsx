@@ -1,4 +1,10 @@
 import { useEffect, useState } from "react";
+import tank1 from "./assets/images/tank-1.png";
+import tank2 from "./assets/images/tank-2.png";
+import tank3 from "./assets/images/tank-3.png";
+import tank4 from "./assets/images/tank-4.png";
+import tank7 from "./assets/images/tank-7.png";
+import tank8 from "./assets/images/tank-8.png";
 
 type Lang = "ar" | "en";
 
@@ -6,7 +12,6 @@ const MAP_URL = "https://maps.app.goo.gl/rTXVNVcJ9TvzK57H6?g_st=aw";
 const WHATSAPP_URL =
   "https://wa.me/97466140607?text=" +
   encodeURIComponent("مرحباً، أود الاستفسار عن خدمة تنظيف خزانات المياه");
-const imageUrl = (filename: string) => `${import.meta.env.BASE_URL}images/${filename}`;
 
 const copy = {
   ar: {
@@ -266,12 +271,12 @@ export default function App() {
 
   const navIds = ["home", "services", "why", "work", "contact"];
   const gallery = [
-    { src: imageUrl("tank-3.png"), tag: t.before },
-    { src: imageUrl("tank-4.png"), tag: t.after },
-    { src: imageUrl("tank-7.png"), tag: t.before },
-    { src: imageUrl("tank-8.png"), tag: t.after },
-    { src: imageUrl("tank-1.png"), tag: t.before },
-    { src: imageUrl("tank-2.png"), tag: t.after },
+    { src: tank3, tag: t.before },
+    { src: tank4, tag: t.after },
+    { src: tank7, tag: t.before },
+    { src: tank8, tag: t.after },
+    { src: tank1, tag: t.before },
+    { src: tank2, tag: t.after },
   ];
 
   return (
@@ -383,7 +388,7 @@ export default function App() {
             </div>
             <div className="hero-visual">
               <div className="hero-card">
-                <img src={imageUrl("tank-8.png")} alt={t.imageAlt} />
+                <img src={tank8} alt={t.imageAlt} />
                 <div className="water-rings">
                   <i />
                   <i />
@@ -443,11 +448,11 @@ export default function App() {
             <div className="why-media">
               <div className="before-after">
                 <div>
-                  <img src={imageUrl("tank-7.png")} alt={t.before} />
+                  <img src={tank7} alt={t.before} />
                   <span>{t.before}</span>
                 </div>
                 <div>
-                  <img src={imageUrl("tank-8.png")} alt={t.after} />
+                  <img src={tank8} alt={t.after} />
                   <span className="after-tag">{t.after}</span>
                 </div>
               </div>
